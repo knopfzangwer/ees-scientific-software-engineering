@@ -1,5 +1,5 @@
-import pytest
 import numpy as np
+import pytest
 
 from ees_scientific_software_engineering.simple_function import add, multiply, rmse
 
