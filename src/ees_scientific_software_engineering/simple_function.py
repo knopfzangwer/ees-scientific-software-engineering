@@ -25,5 +25,5 @@ def multiply(a: int, b: int) -> int:
     return a * b
 
 
-def rms(input_array: np.ndarray) -> float:
+def rmse(input_array: np.ndarray) -> float:
     return np.sqrt(np.mean((np.input_array**2)))
