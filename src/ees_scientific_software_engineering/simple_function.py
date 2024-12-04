@@ -26,4 +26,4 @@ def multiply(a: int, b: int) -> int:
 
 
 def rmse(input_array: np.ndarray) -> float:
-    return np.sqrt(np.mean((np.input_array**2)))
+    return np.sqrt(np.mean((input_array**2)))
