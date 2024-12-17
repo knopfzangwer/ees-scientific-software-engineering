@@ -1,8 +1,8 @@
-import numpy as np
-
 """
 A module with simple function
 """
+
+import numpy as np
 
 
 def add(a: int, b: int) -> int:
@@ -26,6 +26,18 @@ def multiply(a: int, b: int) -> int:
 
 
 def rmse(input_array: np.ndarray) -> float:
+    """Calculate root mean square
+
+    Args:
+        input_array: array
+
+    Raises:
+        TypeError: _description_
+        ValueError: _description_
+
+    Returns:
+        _description_
+    """
     if not isinstance(input_array, np.ndarray):
         raise TypeError("The array should be a instance of np.ndarray!")
     if len(input_array) == 0:
