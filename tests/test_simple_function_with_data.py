@@ -12,6 +12,6 @@ def test_multiply_from_data():
     assert multiply(data["x"], data["y"]) == data["expected"]
 
 def test_rmse_from_data():
-    with open(DATA_PATH / "test_multiply.json") as f:
+    with open(DATA_PATH / "test_rmse.json") as f:
         data = json.load(f)
     assert rmse(data["x"], data["y"]) == data["expected"]
