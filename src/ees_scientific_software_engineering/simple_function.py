@@ -46,7 +46,7 @@ def rmse(input_array: np.ndarray) -> float:
         raise TypeError("The shape of the array must be one-dimensional!")
     if np.inf in input_array:
         raise ValueError("The array should not include inf!")
-    if np.isnan(input_array):
+    if np.nan in input_array:
         raise ValueError("The array should not include NaN!")
     if input_array.dtype != np.float64:
         raise ValueError("The type of the array must be float64!")
