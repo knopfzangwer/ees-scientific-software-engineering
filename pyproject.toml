@@ -17,7 +17,7 @@ classifiers = [
 ]
 requires-python = ">=3.12"
 # add dependencies of your core package, check the license first!
-dependencies = ["numpy"]
+dependencies = ["numpy", "scipy"]
 version = "0.1"
 
 [project.optional-dependencies]
@@ -57,7 +57,7 @@ line_length = 120
 fail-under = 10
 max-line-length = 120
 
-
+disable = "too-few-public-methods"
 # Minimum Python version to use for version dependent checks. Will default to the
 # version used to run pylint.
 py-version = "3.12"
