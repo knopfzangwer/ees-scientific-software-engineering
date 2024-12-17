@@ -44,4 +44,6 @@ def rmse(input_array: np.ndarray) -> float:
         raise ValueError("Array length should not be zero!")
     if len(input_array.shape) > 1:
         raise TypeError("The shape of the array must be one-dimensional!")
+    if np.inf in input_array:
+        raise ValueError("The array should not include inf!")
     return np.sqrt(np.mean((input_array**2)))

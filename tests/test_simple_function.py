@@ -40,3 +40,9 @@ def test_dimension():
     a = np.array([[1, 2, 3], [2, 3, 5]])
     with pytest.raises(TypeError, match="The shape of the array must be one-dimensional!"):
         rmse(a)
+
+
+def test_rmse_inf():
+    a = np.array([5, np.inf])
+    with pytest.raises(ValueError, match="The array should not include inf!"):
+        rmse(a)
