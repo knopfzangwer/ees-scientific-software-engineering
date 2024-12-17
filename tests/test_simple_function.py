@@ -22,3 +22,9 @@ def test_add_error():
 def test_rmse():
     a = np.array([3, 4])
     assert rmse(a) == np.sqrt(12.5)
+
+
+def test_rmse_arraylength():
+    a = np.array([])
+    with pytest.raises(ValueError, match="Array length should not be zero!"):
+        rmse(a)
