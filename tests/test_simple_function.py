@@ -34,4 +34,3 @@ def test_rmse_arraylength():
     a = np.array([])
     with pytest.raises(ValueError, match="Array length should not be zero!"):
         rmse(a)
-
