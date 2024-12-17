@@ -30,6 +30,12 @@ def test_instance():
         rmse(a)
 
 
+def test_rmse_arraylength():
+    a = np.array([])
+    with pytest.raises(ValueError, match="Array length should not be zero!"):
+        rmse(a)
+
+
 def test_dimension():
     a = np.array([[1, 2, 3], [2, 3, 5]])
     with pytest.raises(TypeError, match="The shape of the array must be one-dimensional!"):
