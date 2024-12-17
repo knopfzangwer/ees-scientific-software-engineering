@@ -20,7 +20,7 @@ def test_add_error():
 
 
 def test_rmse():
-    a = np.array([3, 4])
+    a = np.array([3, 4], dtype=np.float64)
     assert rmse(a) == np.sqrt(12.5)
 
 
@@ -37,12 +37,24 @@ def test_rmse_arraylength():
 
 
 def test_dimension():
-    a = np.array([[1, 2, 3], [2, 3, 5]])
+    a = np.array([[1, 2, 3], [2, 3, 5]], dtype=np.float64)
     with pytest.raises(TypeError, match="The shape of the array must be one-dimensional!"):
         rmse(a)
 
 
 def test_rmse_inf():
-    a = np.array([5, np.inf])
+    a = np.array([5, np.inf], dtype=np.float64)
     with pytest.raises(ValueError, match="The array should not include inf!"):
+        rmse(a)
+
+
+def test_rmse_float64():
+    a = np.array([5, 5], dtype=np.int32)
+    with pytest.raises(ValueError, match="The type of the array must be float64!"):
+        rmse(a)
+
+
+def test_rmse_nan():
+    a = np.array([5, np.nan], dtype=np.float64)
+    with pytest.raises(ValueError, match="The array should not include NaN!"):
         rmse(a)
