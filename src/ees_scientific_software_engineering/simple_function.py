@@ -26,4 +26,6 @@ def multiply(a: int, b: int) -> int:
 
 
 def rmse(input_array: np.ndarray) -> float:
+    if len(input_array) == 0:
+        raise ValueError("Array length should not be zero!")
     return np.sqrt(np.mean((input_array**2)))
