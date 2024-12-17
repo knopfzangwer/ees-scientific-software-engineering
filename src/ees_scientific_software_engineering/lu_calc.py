@@ -1,7 +1,15 @@
+"""LU decomposition and solve a linear equation
+
+Returns:
+    a numpy ndarray
+"""
+
 import numpy as np
 from scipy.linalg import lu_factor, lu_solve
 
 class LUSolver:
+    """_summary_
+    """
     def __init__(self, input_matrix: np.ndarray):
         """
         Constructor of the class. It takes the input matrix and decompose it into LU factorization.
